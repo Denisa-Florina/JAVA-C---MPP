@@ -101,5 +101,5 @@ gRPC: A high-performance RPC framework that would replace the custom RPC solutio
 Apache Thrift: An efficient framework for cross-language services, which could improve flexibility and performance.
 
 Additionally, I plan to develop the client and server in two different languages (c# - java) to optimize interoperability and scalability of the application.
----
+
 
