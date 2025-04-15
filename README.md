@@ -27,7 +27,6 @@ Buy tickets for specific flights by entering:
 
 Once a ticket is purchased:
 - All connected agency employees receive **real-time updates**
-- Flights with no available seats are automatically **removed** from the interface
 
 ---
 
@@ -38,11 +37,11 @@ Once a ticket is purchased:
 - 🔍 **Search Flights** by destination and date
 - 🎫 **Book Tickets** with automatic update of seat availability
 - 🔔 **Live Updates** via the Observer Pattern
-- 🌐 **RPC Protocol Communication** with 2 classes Response and Request (and one enum for each)
+- 🌐 **RPC Protocol Communication** with two classes: Response and Request (and one enum for each)
 - 💎 Modern **JavaFX GUI** / **Windows Forms**
 
 ### 🗄 Server
-- 🧵 **Multithreaded processing** using `ExecutorService` or `Platform.runLater()`
+- 🧵 **Multithreaded processing** e.g. `ExecutorService`, `Platform.runLater()`, `Task.Run()`
 - 📢 **Observer notifications** for live updates
 - 🔒 **Thread-safe logic**
 - 🛠️ **JDBC Repositories**
@@ -51,6 +50,7 @@ Once a ticket is purchased:
 - 🌐 **JSON** serialization/deserialization for c#
 - 📋 **SQLite** for data persistance, with reading the connection string from a configuration file
 
+---
 
 ## 🔎 Technical Highlights
 
@@ -59,7 +59,7 @@ Both implementations use **reflection** to dynamically dispatch RPC calls:
 - Java: `Method.invoke(...)`
 - C#: `MethodInfo.Invoke(...)`
 
-This allows for a flexible and scalable RPC system where each request type maps to a `Handle<REQUEST_TYPE>` method.
+> This allows for a flexible and scalable RPC system where each request type maps to a `Handle<REQUEST_TYPE>` method.
 
 ### 📡 Observer Pattern
 Clients implement an observer interface:
@@ -91,7 +91,9 @@ The Singleton pattern ensures that there is only one instance of key services in
 ### 🏰 Proxy Pattern
 The Proxy pattern is used for client-server communication, where a proxy object is created to represent the server's behavior:
 
-The client communicates with the proxy, which handles the actual RPC calls to the server. This enables flexibility and additional functionality, such as logging or security checks, without modifying the server directly.
+ - The client communicates with the proxy, which handles the actual RPC calls to the server. This enables flexibility and additional functionality, such as logging or security checks, without modifying the server directly.
+
+---
 
 ### 🚀 Future Technologies
 In the future, this system will be enhanced using advanced networking technologies, such as:
