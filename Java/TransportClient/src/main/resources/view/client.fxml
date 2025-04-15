@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="transport.client.controllers.MainController">
+    <children>
+        <ListView fx:id="flightsList" layoutX="36.0" layoutY="39.0" prefHeight="301.0" prefWidth="302.0" />
+        <Label layoutX="381.0" layoutY="39.0" text="Destination:" />
+        <TextField fx:id="destinationField" layoutX="464.0" layoutY="35.0" prefHeight="26.0" prefWidth="175.0" />
+        <DatePicker fx:id="datePicker" layoutX="467.0" layoutY="81.0" prefHeight="26.0" prefWidth="175.0" />
+        <Label layoutX="376.0" layoutY="85.0" prefHeight="18.0" prefWidth="74.0" text="Data plecarii:" />
+        <Button fx:id="searchButton" layoutX="518.0" layoutY="125.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="26.0" prefWidth="52.0" text="Search" />
+        <Label layoutX="418.0" layoutY="229.0" text="Seats:" />
+        <Spinner fx:id="seatsSpinner" layoutX="470.0" layoutY="225.0" />
+        <Label layoutX="402.0" layoutY="275.0" text="Pasageri:" />
+        <TextField fx:id="passengersField" layoutX="469.0" layoutY="271.0" prefHeight="26.0" prefWidth="150.0" />
+        <Button fx:id="buyButton" layoutX="519.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleBuy" prefHeight="26.0" prefWidth="52.0" text="Buy" />
+        <Button fx:id="logoutButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+    </children>
+</AnchorPane>
